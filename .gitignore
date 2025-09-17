@@ -1,0 +1,45 @@
+# tells git to ignore certain files, as they are locally generated (and don't need to be pushed to github)
+# ignore Python bytecode cache directories
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# ignore build artifacts
+artifacts/
+build/
+dist/
+*.egg-info/
+
+# ignore outputs as they can be dynamically regenerated
+output/
+
+# mac artifacts
+.DS_store
+
+# ignore virtual environment
+.venv/
+venv/
+ENV/
+env/
+
+# simulation output files
+.log
+
+# ignore cluster virtual environments
+venvs
+
+# ignore .pbs files
+.pbs
+
+pbs
+
+
+output_hpc
+
+activated_coal_hpc.pbs
+CreateGrapheneLayers
+
+.csv
+.png
+

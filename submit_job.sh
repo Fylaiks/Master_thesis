@@ -1,0 +1,22 @@
+#!/bin/bash -l
+
+#PBS -N testfile_sinus
+#PBS -e pbs/test_sinus_${PBS_JOBID}.err
+#PBS -o pbs/test_sinus_${PBS_JOBID}.out
+#PBS -l nodes=1:ppn=8
+#PBS -l walltime=00:05:00 
+
+# Load environment
+source ~/.bashrc
+shopt -s expand_aliases
+sc
+pwd
+cd Testing_HPC_onboarding
+
+module load vsc-venv
+source vsc-venv --activate --requirements requirements.txt --modules modules.txt
+
+python test.py
+
+wait
+
