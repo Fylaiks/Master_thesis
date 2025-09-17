@@ -19,4 +19,3 @@ source vsc-venv --activate --requirements requirements.txt --modules modules.txt
 python test.py
 
 wait
-
