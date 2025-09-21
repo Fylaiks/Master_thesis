@@ -11,11 +11,16 @@ source ~/.bashrc
 shopt -s expand_aliases
 sc
 pwd
-cd Testing_HPC_onboarding
+cd Master_thesis
 
+# Load Python environment
 module load vsc-venv
 source vsc-venv --activate --requirements requirements.txt --modules modules.txt
 
+# Load ORCA
+module load ORCA/6.1.0-gompi-2023b-avx2
+
+# Run the script
 python test.py
 
 wait
