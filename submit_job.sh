@@ -1,10 +1,10 @@
 #!/bin/bash -l
 
-#PBS -N testfile_sinus
-#PBS -e pbs/test_sinus_${PBS_JOBID}.err
-#PBS -o pbs/test_sinus_${PBS_JOBID}.out
+#PBS -N testfile_orca
+#PBS -e pbs/test_orca_${PBS_JOBID}.err
+#PBS -o pbs/test_orca_${PBS_JOBID}.out
 #PBS -l nodes=1:ppn=8
-#PBS -l walltime=00:05:00 
+#PBS -l walltime=00:15:00 
 
 # Load environment
 source ~/.bashrc
@@ -21,6 +21,5 @@ source vsc-venv --activate --requirements requirements.txt --modules modules.txt
 module load ORCA/6.1.0-gompi-2023b-avx2
 
 # Run the script
-python test.py
-
-wait
+# python generate_orca_input.py
+orca calc.inp > calc.out
