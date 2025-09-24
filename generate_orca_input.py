@@ -20,7 +20,7 @@ def xyz_to_orca_inp(xyz_file, inp_file, method="B3LYP", basis="def2-SVP", charge
         f.write("*\n")
 
 if __name__ == "__main__":
-    xyz_file = "Structures/Zn_Imidazole_4_ClO4_2/829566.xyz"   # path to your .xyz file
+    xyz_file = "Structures/Zn_Im_2_acetate_2/1148454.xyz"   # path to your .xyz file
     inp_file = "calc.inp"                # output ORCA input file
 
     xyz_to_orca_inp(xyz_file, inp_file)
